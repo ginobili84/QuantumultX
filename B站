@@ -1,0 +1,11 @@
+const url = $request.url;
+const accessKey = 'your_access_key';  // 替换为您的实际访问令牌
+
+// 修改URL以包含访问令牌
+const modifiedUrl = url + `&access_key=${accessKey}`;
+const headers = $request.headers;
+
+// 如有需要，可以在此修改头信息
+// headers['Authorization'] = 'Bearer your_token';
+
+$done({ url: modifiedUrl, headers: headers });
